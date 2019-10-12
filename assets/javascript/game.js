@@ -4,8 +4,9 @@ $(document).ready(function () {
     //Computer generates a random number between 19 and 120
 
     let computerRandomNumber = Math.floor(Math.random() * ((120 - 19) + 1) + 19);
-    computerRandomNumber =
-        $("#random-number").html(computerRandomNumber);
+    let totalScore = 0;
+    //computerRandomNumber =
+    $("#random-number").html(computerRandomNumber);
     $("#random-number").text(computerRandomNumber);
 
     //document.getElementById("random number").innerHTML
@@ -16,16 +17,22 @@ $(document).ready(function () {
     let losses = 0;
 
     function win() {
-        let wins = 0;
+        wins = 0;
         wins = wins + 1
-        $("#wins").html(wins);
+        //$("#wins").html(wins);
         $("#wins").text(wins);
 
     }
 
     function lose() {
         losses = losses + 1
+        totalScore = 0
+        computerRandomNumber = Math.floor(Math.random() * ((120 - 19) + 1) + 19);
         $("#loss_count").text(losses);
+        $("#total-score").html(totalScore);
+        $("#total-score").text(totalScore);
+        $("#random-number").html(computerRandomNumber);
+        $("#random-number").text(computerRandomNumber);
     }
 
     function check() {
@@ -35,6 +42,9 @@ $(document).ready(function () {
         }
         else if (totalScore > computerRandomNumber) {
             lose();
+
+
+
         }
         else {
             return true
@@ -43,7 +53,8 @@ $(document).ready(function () {
     }
 
     function reset() {
-        // Reassign random number 
+        let totalScore = 0;
+        $("#total-score").text(totalScore);
     }
 
     //each gem has a hidden value  random number between 1 and 12
@@ -99,8 +110,6 @@ $(document).ready(function () {
         //document.getElementById("button-4").innerHTML
         //console.log(random4);
     });
-
-    let totalScore = 0;
 
     $("#total-score").html(totalScore);
     $("#total-score").text(totalScore);

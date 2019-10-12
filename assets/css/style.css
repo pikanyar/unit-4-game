@@ -1,31 +1,47 @@
 body {
-    background: url(lightblue.png);
-    font-family: 'Rubik', sans-serif;
-    color: gray;
+    font-family: 'Alfa Slab One', cursive;
+    background: url(best-illustration-designCopy.jpg);
+    color: #1d1d53;
 }
 
 .col-md-8 {
     font-size: 16px;
+    background-color: coral;  
+}
+
+.col-md-4 {
+    background-color: coral;   
+}
+
+.col-md {
+    background-color: coral;  
 }
 
 .text-center {
     font-size: 50px;
+   
+
+ 
 }
 
 
 #random-number {
-    font-size: 45px:;
+    font-size: 45px;
+   
 }
 
 
 #total-score {
     font-size: 45px;
+  
 }
 
 #wins {
     font-size: 30px;
+    padding-top: 40px;
 }
 
 #losses {
     font-size: 30px;
+    padding-top: 40px;
 }
